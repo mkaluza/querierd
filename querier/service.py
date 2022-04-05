@@ -56,7 +56,7 @@ def ip4_addresses():
 
 def main():
     parser = argparse.ArgumentParser(description='Querierd queries the multicast group in a certain interval to prevent IGMP snooping')
-    parser.add_argument('-i', '--interval', help='IGMP query interval', default=60.0)
+    parser.add_argument('-i', '--interval', help='IGMP query interval', default=60.0, type=float)
     parser.add_argument('-d', '--debug', help='Enable debug mode', action='store_true')
     args = parser.parse_args()
 

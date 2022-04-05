@@ -85,6 +85,7 @@ class Querier:
                 wait = 0.0
 
             elapsed = self.listener.elapsed()
+            elapsed = self.interval #disable election for now
             if self.elected:
                 self.socket.sendto(str(self.packet), (all_routers, 0))
                 if elapsed < self.interval:
